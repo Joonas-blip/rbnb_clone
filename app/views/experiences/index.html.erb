@@ -2,8 +2,11 @@
   <h1>Browse All Experiences</h1>
   <div class="cards">
       <% @experiences.each do |experience| %>
-        <div class="" style="background-image: url(http://kitt.lewagon.com/placeholder/cities/rio)" alt='experience-photo'>
-        <%= experience.title %>
+        <div class="card-experience" style="height: 669px; width: 495;">
+          <%= cl_image_tag("sample", width: 460, height: 331, crop: :fill) %>
+          <h4><%= experience.title %></h4>
+          <p><%= experience.location %> | <%= experience.duration %> | <%= experience.category %> | <%= experience.price %></p>
+          <p><%= experience.description %></p>
         </div>
       <% end %>
   </div>
