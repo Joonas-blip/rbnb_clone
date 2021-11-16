@@ -8,7 +8,7 @@ class User < ApplicationRecord
   validates :username, presence: true, length: { minimum: 8 }
   validates :email, presence: true, uniqueness: true, format: { with: /\w+@\w+/ }
   validates :encrypted_password, presence: true, length: { minimum: 8 }
-  validates :role, inclusion: { in: w%(user guide) }, presence: true
+  validates :role, inclusion: { in: %w(user guide) }, presence: true
   validates :first_name, :last_name, presence: true
 
   # INSTANCE METHODS
