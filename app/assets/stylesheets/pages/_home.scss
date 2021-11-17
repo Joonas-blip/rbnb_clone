@@ -1,1 +1,25 @@
 // Specific CSS for your home-page
+
+* {
+  background-color: white;
+}
+
+h1 {
+  padding-top: 15vh;
+  letter-spacing: 10px;
+  text-align: center;
+  font-weight: 900;
+}
+
+.tourguide-search {
+  width: 100%;
+  margin: 0 auto;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-element, .search-button {
+  margin-right: 40px;
+  margin-left: 40px;
+}
