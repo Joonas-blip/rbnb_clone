@@ -1,2 +1,28 @@
-<h1><%= @experience.title %></h1>
-<img src="https://i.picsum.photos/id/54/600/400.jpg?hmac=ZmYkZIotvhwgzUu4J2IFo2YzkbFB4y74JaOpPkw8ftA" alt="experience-photo"> <%# photo from cloudinary API %>
+<div class="container">
+  <h1><%= @experience.title %></h1>
+  <br>
+  <br>
+  <% @experience.photos.each do |photo| %>
+    <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+  <% end %>
+  <br>
+  <br>
+  <div class="column">
+    <div>
+      <div class="card-avatar">
+        <img src="<%= @experience.user.avatar %>" placeholder="user avatar" class="avatar">
+        <div class="card-avatar-info">
+          <p><strong>Hosted by <%= @experience.user.first_name %></strong></p>
+          <p><%= @experience.duration %> hours, <%= @experience.price %>€</p>
+        </div>
+      </div>
+      <br>
+      <p><%= @experience.location %></p>
+      <p><%= @experience.description %></p>
+    </div>
+
+    <div>
+      <p>booking form</p>
+    </div>
+  </div>
+</div>
