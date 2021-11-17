@@ -4,6 +4,10 @@
   background: white;
   height: 10vh;
   padding-top: 10px;
+  z-index: 5;
+  width: 100%;
+  position: fixed;
+  top: 0;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -29,7 +33,7 @@
 
 .nb-link {
   margin-right: 50px;
-  background-color: black;
+  background-color: #003554;
   width: 280px;
   text-align: center;
   border-radius: 30px;
@@ -41,7 +45,7 @@
 }
 
 .nb-link:hover {
-  background-color: #595959;
+  background-color: #006494;
 }
 
 
