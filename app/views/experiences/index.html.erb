@@ -3,14 +3,14 @@
     <div class="cards">
         <% @experiences.each do |experience| %>
             <div class="card-experience">
-              <%= cl_image_tag("sample", width: 460, height: 331, crop: :fill) %>
+              <%= cl_image_tag("sample") %>
               <div class="card-info">
                 <h5><%= experience.title %></h5>
                 <p>Barcelona | <%= experience.duration %> hours | <%= experience.category %></p>
-                <p><%= experience.description %></p>
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
               </div>
               <ul class="view-price">
-                <li class="button"><a>View</a></li>
+                <li class="button"><%= link_to "View", experience_path(experience) %></li>
                 <li><%= experience.price %>/hour</li>
               </ul>
             </div>
