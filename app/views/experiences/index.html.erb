@@ -2,12 +2,14 @@
   <h1>Browse All Experiences</h1>
   <div class="cards">
       <% @experiences.each do |experience| %>
-        <div class="card-experience" style="height: 669px; width: 495;">
-          <%= cl_image_tag("sample", width: 460, height: 331, crop: :fill) %>
-          <h4><%= experience.title %></h4>
-          <p><%= experience.location %> | <%= experience.duration %> | <%= experience.category %> | <%= experience.price %></p>
-          <p><%= experience.description %></p>
-        </div>
+        <%= link_to experience_path(experience) do %>
+          <div class="card-experience" style="height: 669px; width: 495;">
+            <%= cl_image_tag("sample", width: 460, height: 331, crop: :fill) %>
+            <h4><%= experience.title %></h4>
+            <p><%= experience.location %> | <%= experience.duration %> | <%= experience.category %> | <%= experience.price %></p>
+            <p><%= experience.description %></p>
+          </div>
+        <% end %>
       <% end %>
   </div>
 </div>
