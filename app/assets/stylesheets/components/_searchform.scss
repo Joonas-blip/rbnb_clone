@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.cover {
+  background: white;
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-form {
+  display: flex;
+  border: 10px solid black;
+  border-radius: 5px;
+  width: 60vw;
+}
+
+input[type=search] {
+  flex-basis: 500px;
+}
+
+.flex-form > * {
+  border: 0;
+  padding: 10px;
+  line-height: 50px;
+  font-size: 20px;
+  border-radius: 0;
+  background: #fff;
+  margin-left: 1px;
+}
+
+.flex-form input[type=submit] {
+  background: #003554;
+  color: white;
+}
+
+.search-button {
+  width: 20vw;
+  margin-left: 50px;
+}
