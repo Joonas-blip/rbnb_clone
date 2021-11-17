@@ -1,0 +1,11 @@
+development:
+  cloud_name: "de093wmlp"
+  api_key: "598469594687427"
+  api_secret: "6xZyJwmUWNV3Tys2bMDYItGIzuY"
+  secure: true
+
+production:
+  cloud_name: "de093wmlp"
+  api_key: "598469594687427"
+  api_secret: "6xZyJwmUWNV3Tys2bMDYItGIzuY"
+  secure:true
