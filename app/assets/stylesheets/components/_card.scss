@@ -1,0 +1,45 @@
+.card-experience {
+  width: 20vw;
+  height: 560px;
+  padding: 20px;
+  display: block;
+  box-shadow: 2px 2px 5px lightgrey;
+  border-radius: 10px;
+}
+
+.card-experience img {
+  border-radius: 10px;
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-info {
+  margin-top: 15px;
+}
+
+.card-info h6 {
+  font-weight: 100;
+  letter-spacing: 0.5px;
+}
+
+.view-price {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style-type: none;
+  margin-top: 10px;
+}
+
+.cards {
+  margin-top: 5vh;
+  width: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-bottom: 5vh;
+}
