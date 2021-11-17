@@ -63,12 +63,10 @@ ActiveRecord::Schema.define(version: 2021_11_16_154212) do
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id", null: false
     t.boolean "availability", default: true
-<<<<<<< HEAD
     t.float "latitude"
     t.float "longitude"
     t.string "address"
-=======
->>>>>>> f4cb4d454dabfd6220e79061332e4d956b187b6d
+
     t.index ["user_id"], name: "index_experiences_on_user_id"
   end
 
