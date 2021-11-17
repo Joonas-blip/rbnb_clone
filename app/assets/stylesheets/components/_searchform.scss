@@ -36,9 +36,17 @@ input[type=search] {
 .flex-form input[type=submit] {
   background: #003554;
   color: white;
+  transition: all .2s ease;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 500;
 }
 
 .search-button {
   width: 20vw;
   margin-left: 50px;
+}
+
+.flex-form input[type=submit]:hover {
+  background: #595959;
 }
