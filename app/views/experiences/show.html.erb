@@ -1,2 +1,24 @@
-<h1><%= @experience.title %></h1>
-<img src="https://i.picsum.photos/id/54/600/400.jpg?hmac=ZmYkZIotvhwgzUu4J2IFo2YzkbFB4y74JaOpPkw8ftA" alt="experience-photo"> <%# photo from cloudinary API %>
+<div class="container">
+  <h1><%= @experience.title %></h1>
+  <br>
+  <br>
+  <% @experience.photos.each do |photo| %>
+    <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+  <% end %>
+  <br>
+  <br>
+  <img src="<%= @experience.user.avatar %>" placeholder="user avatar" class="avatar">
+  <p><strong>Hosted by <%= @experience.user.first_name %></strong></p>
+  <p><%= @experience.duration %> hours, <%= @experience.price %>€</p>
+  <br>
+  <p><%= @experience.location %></p>
+  <p><%= @experience.description %></p>
+
+  <%= form_with do |f| %>
+     <%= f.label :start_time, "Start time" %> <%# maybe we can use bootstrap-datepicker for the calendar in the home page %>
+     <%= f.time_field :start_time %>
+     <%= f.label :end_time, "End time" %>
+     <%= f.time_field :end_time %>
+     <%= f.submit %>
+  <% end %>
+</div>
