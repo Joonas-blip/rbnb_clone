@@ -4,8 +4,7 @@
 }
 
 .cover {
-  background: white;
-  width: 100%;
+  width: 100vw;
   height: 30vh;
   display: flex;
   justify-content: center;
@@ -16,7 +15,7 @@
   display: flex;
   border: 10px solid black;
   border-radius: 5px;
-  width: 60vw;
+  background-color: white;
 }
 
 input[type=search] {
@@ -43,8 +42,9 @@ input[type=search] {
 }
 
 .search-button {
-  width: 20vw;
+  width: 150px;
   margin-left: 50px;
+  padding-left: 20px;
 }
 
 .flex-form input[type=submit]:hover {
