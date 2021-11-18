@@ -24,7 +24,7 @@ experience1 = Experience.new(
   price: 200,
   duration: 4,
   category: "foodie",
-  user: User.first
+  user: User.last
 )
 experience1.photos.attach(
   io: file1,
@@ -37,7 +37,7 @@ experience1.save!
   p file2
 experience2 = Experience.new(
   title: "Lake Como tour",
-  address: "Via Regina, 48, 22012 Cernobbio CO",
+  address: "Piazza Castello, 20121 Milano MI",
   description: "Enjoy a full day at spectacular Lake Como, Italy's famous lakeside resort. Explore the beautiful streets of Como city with your guide. Enjoy a cruise to Bellagio Island on the summer tour and funicular to Brunate on the winter tour.",
   price: 300,
   duration: 10,
@@ -60,7 +60,7 @@ experience3 = Experience.new(
   price: 50,
   duration: 2,
   category: "foodie",
-  user: User.first
+  user: User.last
 )
 experience3.photos.attach(
   io: file3,
@@ -78,7 +78,7 @@ experience4 = Experience.new(
   price: 300,
   duration: 2,
   category: "theatre",
-  user: User.first
+  user: User.last
 )
 experience4.photos.attach(
   io: file4,
@@ -92,12 +92,12 @@ experience4.save!
   p file5
 experience5 = Experience.new(
   title: "White Truffle hunting",
-  address: "Via Filodrammatici, 2, 20121 Milano MI",
+  address: "Via Spadari, 9, 20123 Milano MI",
   description: "You will be accompanied by experienced truffle hunters and their dogs. At an extra cost, participate in a Private truffle cooking class and/or enjoy a dinner specialty made with truffles from starter to dessert.",
   price: 350,
   duration: 10,
   category: "short trip",
-  user: User.first
+  user: User.last
 )
 experience5.photos.attach(
   io: file5,
@@ -115,7 +115,7 @@ experience6 = Experience.new(
   price: 150,
   duration: 4,
   category: "museums",
-  user: User.first
+  user: User.last
 )
 experience6.photos.attach(
   io: file6,
