@@ -6,6 +6,9 @@
       class: "form-control",
       placeholder: "Explore new experiences"
     %>
+    <%= date_field_tag 'date' %>
+    <%= label_tag 'Guests' %>
+    <%= select_tag "Guests", raw("<option>1</option><option>2</option><option>3</option><option>4</option>") %>
     <%= submit_tag "Search", class: "search-button" %>
   <% end %>
 
