@@ -1,2 +1,7 @@
 // Import page-specific CSS files here.
 @import "home";
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}

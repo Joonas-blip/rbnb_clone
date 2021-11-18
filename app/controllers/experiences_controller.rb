@@ -1,32 +1,18 @@
 class ExperiencesController < ApplicationController
-  skip_before_action :authenticate_user!, only: :index
-  before_action :set_experience, only: [:show, :create, :update, :destroy]
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
     @experiences = Experience.all
+    @markers = @experiences.geocoded.map do |experience|
+      {
+        lat: experience.latitude,
+        lng: experience.longitude
+      }
+    end
   end
 
-  def show; end
-
-  def new
-    @experience = Experience.new
-  end
-
-  def create
-  end
-
-  def edit
-  end
-
-  def update
-  end
-
-  def destroy
-  end
-
-  private
-
-  def set_experience
+  def show
     @experience = Experience.find(params[:id])
   end
+
 end

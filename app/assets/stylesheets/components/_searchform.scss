@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.cover {
+  width: 100vw;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-form {
+  display: flex;
+  border: 10px solid black;
+  border-radius: 5px;
+  background-color: white;
+}
+
+input[type=search] {
+  flex-basis: 500px;
+}
+
+.flex-form > * {
+  border: 0;
+  padding: 10px;
+  line-height: 50px;
+  font-size: 20px;
+  border-radius: 0;
+  background: #fff;
+  margin-left: 1px;
+}
+
+.flex-form input[type=submit] {
+  background: #003554;
+  color: white;
+  transition: all .2s ease;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 500;
+}
+
+.search-button {
+  width: 150px;
+  margin-left: 50px;
+  padding-left: 20px;
+}
+
+.flex-form input[type=submit]:hover {
+  background: #595959;
+}
