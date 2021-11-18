@@ -1,20 +1,29 @@
-<div class="container">
   <h1>Dashboard</h1>
   <br>
-  <%= button_to "See Bookings", "#", class: "button", method: "get" %>
-  <br>
-  <br>
-  <h4>Your Experiences</h4>
-  <div class="list">
+
+
+  <div class="links-left">
+    <h4>Your Experiences</h4>
+    <h5><%= link_to "My Bookings", "#" %></h5>
+    <h5><%= link_to "My Experiences", "#"%></h5>
+  </div>
+
+  <div class="dashboard-list">
+
     <% @dash_experiences.each do |exp| %>
-      <div class="list-content">
-        <p><strong><%= exp.title %></strong></p>
-        <p><%= exp.category %> | <%= exp.price %> €</p>
+
+    <div class="dashboard-list-item">
+
+      <div class="dashboard-details">
+        <p><strong><%= exp.title.titleize %></strong></p>
+        <p class="font-thin"><%= exp.category.capitalize! %> | € <%= exp.price %>0 / hour</p>
       </div>
 
-      <div class="list-actions ">
-        <%= button_to "View details", "#", class: "button", method: "get" %>
+      <div class="view-details">
+        <%= link_to "View details", "#" %>
       </div>
+
+    </div>
+
     <% end %>
   </div>
-</div>
