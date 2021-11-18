@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   end
   resources :bookings, only: [:destroy]
   get '/dashboard', to: 'dashboards#profile'
+  get '/dashboard/bookings', to: 'dashboards#bookings'
 end
