@@ -8,12 +8,14 @@
               <%= cl_image_tag experience.photos.first.key, crop: :fill %>
               <div class="card-info">
                 <h5><%= experience.title %></h5>
-                <p> <%= experience.address %> | <%= experience.duration %> hours | <%= experience.category %></p>
+                <h6> <%= experience.address %> </h6>
+                <p><small><%= experience.duration %> hours | <%= experience.category.titleize %></small></p>
+                <br>
                 <p> <%= truncate experience.description, length: 200, separator: " " %></p>
               </div>
               <ul class="view-price">
                 <li class="button"><%= link_to "View", experience_path(experience) %></li>
-                <li><%= experience.price %>€</li>
+                <li>€<%= experience.price %>0 / hour</li>
               </ul>
             </div>
         <% end %>

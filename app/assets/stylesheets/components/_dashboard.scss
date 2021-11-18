@@ -1,29 +1,56 @@
-.list {
-  display: flex;
+
+.links-left {
+  width: 25%;
+  margin-left: 8vw;
+}
+
+.links-left h4 {
+  margin-top: 5vh;
+  margin-bottom: 10vh;
+}
+
+.links-left a {
+  text-decoration: none;
+  color: black;
+  transition: all .2s ease;
+  font-size: 20px;
+}
+
+.links-left a:hover {
+  color: #828282;
+}
+
+.dashboard-list {
+  width: 50%;
+  float: right;
+  margin-top: -8vh;
+  margin-right: 10vw;
+  background-color: white;
+  box-shadow: 2.5px 2.5px 10px lightgrey;
+  border-radius: 20px;
+  margin-bottom: 10vh;
+}
+
+.dashboard-list-item {
+  width: 100%;
+  display: inline-flex;
   align-items: center;
-  margin-bottom: 8px;
-  background: white;
-  padding: 8px 16px;
-  border: 1px solid rgb(110, 110, 110);
+  justify-content: space-between;
+  padding: 24px;
+  border-bottom: 1px solid #EEEEEE;
 }
 
-.list .list-content {
-  flex-grow: 1;
-  padding: 0 24px;
-  border: 1px solid rgb(110, 110, 110);
+.font-thin {
+  letter-spacing: 0.1px;
+  font-weight: 300;
 }
 
-.list p {
-  margin: 0;
-  line-height: 1.4;
+.view-details a {
+  color: black;
+  text-decoration: none;
+  transition: all .2s ease;
 }
 
-.list .list-actions {
-  opacity: 0;
-  display: flex;
-  transition: ease .3s;
-}
-
-.list:hover {
-  opacity: 1;
+.view-details a:hover {
+  color: #828282;
 }
