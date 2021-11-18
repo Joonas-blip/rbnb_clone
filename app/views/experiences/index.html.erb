@@ -1,3 +1,4 @@
+  <h1>Browse All Experiences</h1>
   <div class="wrapper">
     <h2 style=" margin-left: 5vw; margin-bottom: 5vh;">Browse All Experiences</h2>
     <div class="cards">
@@ -18,9 +19,8 @@
     </div>
 
     <div id="map"
-      style="width: 100%; height: 600px;"
-      data-markers="<%= @markers.to_json %>"
-      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
 
   </div>
