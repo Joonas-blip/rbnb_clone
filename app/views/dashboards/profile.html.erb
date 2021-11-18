@@ -1,0 +1,20 @@
+<div class="container">
+  <h1>Dashboard</h1>
+  <br>
+  <%= button_to "See Bookings", "#", class: "button", method: "get" %>
+  <br>
+  <br>
+  <h4>Your Experiences</h4>
+  <div class="list">
+    <% @dash_experiences.each do |exp| %>
+      <div class="list-content">
+        <p><strong><%= exp.title %></strong></p>
+        <p><%= exp.category %> | <%= exp.price %> €</p>
+      </div>
+
+      <div class="list-actions ">
+        <%= button_to "View details", "#", class: "button", method: "get" %>
+      </div>
+    <% end %>
+  </div>
+</div>
