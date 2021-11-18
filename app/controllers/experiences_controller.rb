@@ -3,7 +3,11 @@ class ExperiencesController < ApplicationController
   before_action :set_experience, only: [:show]
 
   def index
-    @experiences = Experience.all
+    if params[:query].present?
+      @experiences = Experience.where("address ILIKE ?", "%#{params[:query]}%")
+    else
+      @experiences = Experience.all
+    end
     @markers = @experiences.geocoded.map do |experience|
       {
         lat: experience.latitude,
