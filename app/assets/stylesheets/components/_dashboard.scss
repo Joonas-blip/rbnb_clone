@@ -1,0 +1,29 @@
+.list {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  background: white;
+  padding: 8px 16px;
+  border: 1px solid rgb(110, 110, 110);
+}
+
+.list .list-content {
+  flex-grow: 1;
+  padding: 0 24px;
+  border: 1px solid rgb(110, 110, 110);
+}
+
+.list p {
+  margin: 0;
+  line-height: 1.4;
+}
+
+.list .list-actions {
+  opacity: 0;
+  display: flex;
+  transition: ease .3s;
+}
+
+.list:hover {
+  opacity: 1;
+}

@@ -1,9 +1,9 @@
 .card-experience {
   width: 20vw;
-  height: 560px;
+  height: 530px;
   padding: 20px;
   display: block;
-  box-shadow: 2px 2px 5px lightgrey;
+  box-shadow: 2.5px 2.5px 10px lightgrey;
   border-radius: 10px;
 }
 
@@ -18,9 +18,9 @@
   margin-top: 15px;
 }
 
-.card-info h6 {
-  font-weight: 100;
+.card-info h5 {
   letter-spacing: 0.5px;
+  text-transform: capitalize;
 }
 
 .view-price {
@@ -41,5 +41,4 @@
   flex-direction: row;
   flex-wrap: wrap;
   gap: 50px;
-  margin-bottom: 5vh;
 }

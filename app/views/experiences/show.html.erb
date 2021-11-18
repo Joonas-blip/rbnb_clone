@@ -1,26 +1,55 @@
-<div class="container">
-  <h1><%= @experience.title %></h1>
-  <br>
-  <br>
-  <% @experience.photos.each do |photo| %>
-    <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
-  <% end %>
-  <br>
-  <br>
-  <img src="<%= @experience.user.avatar %>" placeholder="user avatar" class="avatar">
-  <p><strong>Hosted by <%= @experience.user.first_name %></strong></p>
-  <p><%= @experience.duration %> hours, <%= @experience.price %>€</p>
-  <br>
-  <p><%= @experience.location %></p>
-  <p><%= @experience.description %></p>
+  <div class="experience-container">
 
-  <div class="form-booking">
-    <%= form_for([@experience, @booking]) do |f| %>
-    <%= f.label :start_time, "Start time" %>
-    <%= f.time_field :start_time %>
-    <%= f.label :end_time, "End time" %>
-    <%= f.time_field :end_time %>
-    <%= f.submit "Submit", class: "button" %>
-  <% end %>
+  <h2><%= @experience.title %></h2>
+  <!-- <h5><%= @experience.location %></h5> -->
+  <h5>Berlin, Germany</h5>
+  <br>
+  <br>
+
+  <div class="photo-container">
+    <!-- <% @experience.photos.each do |photo| %>
+      <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+    <% end %> -->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Tourists_with_guide_in_lower_canyon%2C_Petra.jpg">
+  </div>
+
+  <br>
+  <br>
+
+
+  <div class="guide-details-container">
+
+    <div class="guide-details-avatar">
+      <img src="<%= @experience.user.avatar %>" placeholder="user avatar" class="avatar">
+    </div>
+
+    <div class="guide-details">
+      <p><strong>Hosted by <%= @experience.user.first_name.capitalize! %></strong></p>
+      <p><%= @experience.duration %> hours | €<%= @experience.price %> / hour</p>
+    </div>
+
+  </div>
+
+  <div class="description-form">
+    <div class="guide-description">
+      <p><%= @experience.description %></p>
+    </div>
+
+    <div class="guide-form">
+      <%= form_for([@experience, @booking]) do |f| %>
+        <%= f.label :start_time, "Start time" %>
+        <br>
+        <%= f.time_field :start_time %>
+        <br>
+        <br>
+        <%= f.label :end_time, "End time" %>
+        <br>
+        <%= f.time_field :end_time %>
+        <br>
+        <br>
+        <br>
+        <%= f.submit "Book", class: "button" %>
+      <% end %>
+    </div>
   </div>
 </div>
