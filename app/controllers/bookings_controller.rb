@@ -4,7 +4,15 @@ class BookingsController < ApplicationController
     booking = Booking.new(booking_params)
     booking.user = current_user
     booking.experience = Experience.find(params[:experience_id])
-    booking.save!
+    @experience = booking.experience
+    @booking = Booking.new
+    if booking.save!
+      render "experiences/show"
+      flash[:notice] = "Booked succesfully"
+    else
+      render "experiences/show"
+      flash[:alert] = "Something went wrong!"
+    end
   end
 
   private
