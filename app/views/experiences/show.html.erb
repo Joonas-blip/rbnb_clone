@@ -16,6 +16,7 @@
   <br>
   <br>
 
+
   <div class="guide-details-container">
 
     <div class="guide-details-avatar">
@@ -35,7 +36,7 @@
     </div>
 
     <div class="guide-form">
-      <%= form_with do |f| %>
+      <%= form_for([@experience, @booking]) do |f| %>
         <%= f.label :start_time, "Start time" %>
         <br>
         <%= f.time_field :start_time %>

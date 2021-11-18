@@ -1,0 +1,7 @@
+  <%= form_with do |f| %>
+    <%= f.label :start_time, "Start time" %>
+    <%= f.time_field :start_time %>
+    <%= f.label :end_time, "End time" %>
+    <%= f.time_field :end_time %>
+    <%= f.submit "Submit", class: "button" %>
+  <% end %>
