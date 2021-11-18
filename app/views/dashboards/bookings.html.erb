@@ -1,0 +1,29 @@
+  <h1>Dashboard</h1>
+  <br>
+
+
+  <div class="links-left">
+    <h4>Your Experiences</h4>
+    <h5><%= link_to "My Bookings", dashboard_bookings_path %></h5>
+    <h5><%= link_to "My Experiences", dashboard_path%></h5>
+  </div>
+
+  <div class="dashboard-list">
+
+    <% @dash_bookings.each do |booking| %>
+
+    <div class="dashboard-list-item">
+
+      <div class="dashboard-details">
+        <p><strong><%= booking.experience.title.titleize %></strong></p>
+        <p class="font-thin"><%= booking.start_time.strftime('%H:%M') %> | <%= booking.end_time.strftime('%H:%M') %> | <%= booking.start_time.strftime('%d/%m/%Y') %></p>
+      </div>
+
+      <div class="view-details">
+        <%= link_to "Status: #{booking.status}", "#" %>
+      </div>
+
+    </div>
+
+    <% end %>
+  </div>
