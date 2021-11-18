@@ -1,11 +1,12 @@
 #map {
-  width: 50vw;
+  width: 50%;
   height: 100vh;
-  margin: 45px 0px;
   position: sticky;
   top: 0;
 }
 
-.mapboxgl-canvas {
-  padding-right: 20px;
+
+.card-map-container {
+  display: flex;
+  justify-content: space-around;
 }

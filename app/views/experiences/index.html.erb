@@ -1,7 +1,8 @@
-  <h1>Browse All Experiences</h1>
-  <div class="wrapper">
-    <h2 style=" margin-left: 5vw; margin-bottom: 5vh;">Browse All Experiences</h2>
-    <div class="cards">
+  <h2 style=" margin-left: 5vw; margin-bottom: 5vh;">Browse All Experiences</h2>
+
+  <div class="card-map-container">
+
+    <div class="cards col-6">
         <% @experiences.each do |experience| %>
             <div class="card-experience">
               <%= cl_image_tag("sample") %>
@@ -18,7 +19,7 @@
         <% end %>
     </div>
 
-    <div id="map"
+    <div class="map-container" id="map"
      data-markers="<%= @markers.to_json %>"
      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
     </div>
