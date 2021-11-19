@@ -123,6 +123,32 @@ experience6.photos.attach(
   content_type: 'image/png'
 )
 experience6.save!
+
+puts "Creating Bookings"
+
+booking_1 = Booking.new(
+  start_time: DateTime.new(2021,11,25,10),
+  end_time: DateTime.new(2021,11,25,14),
+  experience: Experience.first,
+  user: User.first
+)
+booking_1.save!
+
+booking_2 = Booking.new(
+  start_time: DateTime.new(2021,11,25,10),
+  end_time: DateTime.new(2021,11,25,20),
+  experience: Experience.all[1],
+  user: User.first
+)
+booking_2.save!
+
+booking_3 = Booking.new(
+  start_time: DateTime.new(2021,11,25,12),
+  end_time: DateTime.new(2021,11,25,16),
+  experience: Experience.all[5],
+  user: User.first
+)
+booking_3.save!
   #  file = URI.open('https://picsum.photos/200/200')
   # experience = Experience.new(
   #   title: Faker::Verb.base,
