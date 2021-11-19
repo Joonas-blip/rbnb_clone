@@ -3,7 +3,7 @@
   <br>
 
   <div class="links-left">
-    <h4>Your Experiences</h4>
+    <h4>Your Bookings</h4>
     <h5><%= link_to "My Bookings", dashboard_bookings_path %></h5>
     <h5><%= link_to "My Experiences", dashboard_path%></h5>
   </div>
@@ -18,8 +18,12 @@
         <p class="font-thin"><%= booking.start_time.strftime('%H:%M') %> - <%= booking.end_time.strftime('%H:%M') %> | <%= booking.start_time.strftime('%d/%m/%Y') %> | Booked by: <%= booking.user.first_name.capitalize %> <%= booking.user.last_name.capitalize %></p>
       </div>
 
-      <div class="view-details">
-        <%= "Status: #{booking.status}" %> <%= link_to "C", confirm_experience_booking_path(experience_id: booking.experience_id, id: booking.id) %> <%= link_to "R", reject_experience_booking_path(experience_id: booking.experience_id, id: booking.id) %>
+      <div class="booking-status">
+        <%= "Status: #{booking.status.capitalize}" %>
+        <div class="markers">
+          <div class="status-marker confirm"><%= link_to "✓", confirm_experience_booking_path(experience_id: booking.experience_id, id: booking.id) %></div>
+          <div class="status-marker reject"><%= link_to "X", reject_experience_booking_path(experience_id: booking.experience_id, id: booking.id) %></div>
+        </div>
       </div>
 
     </div>
