@@ -1,7 +1,8 @@
 class DashboardsController < ApplicationController
+  before_action :authenticate_user!
+
   def profile
-    @dash_experiences = Experience.where(user:current_user)
-    # @dash_bookings = Booking.first(3)
+      @dash_experiences = Experience.where(user:current_user)
   end
 
   def bookings
