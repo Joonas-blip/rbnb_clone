@@ -20,7 +20,7 @@
       </div>
 
       <div class="view-details">
-        <%= link_to "Status: #{booking.status}", "#" %>
+        <%= "Status: #{booking.status}" %> <%= link_to "C", confirm_experience_booking_path(experience_id: booking.experience_id, id: booking.id) %> <%= link_to "R", reject_experience_booking_path(experience_id: booking.experience_id, id: booking.id) %>
       </div>
 
     </div>

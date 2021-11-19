@@ -9,9 +9,15 @@ Rails.application.routes.draw do
   # edit -- && update
   # delete
   resources :experiences do
-    resources :bookings, only: [ :new, :create, :edit, :update, :show]
+    resources :bookings, only: [ :new, :create, :edit, :update, :show] do
+      member do
+        get '/confirm', to: 'bookings#confirm'
+        get '/reject', to: 'bookings#reject'
+      end
+    end
   end
   resources :bookings, only: [:destroy]
   get '/dashboard', to: 'dashboards#profile'
   get '/dashboard/bookings', to: 'dashboards#bookings'
+
 end
