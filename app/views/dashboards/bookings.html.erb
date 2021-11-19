@@ -9,7 +9,9 @@
   </div>
 
   <div class="dashboard-list">
-    <% @dash_bookings.each do |booking| %>
+    <p>Pending Bookings: (<%= @dash_bookings.select{|booking| booking.status == 'pending' }.size %>)</p>
+    <% bookings = @dash_bookings.sort_by! { |booking| booking.id } %>
+    <% bookings.each do |booking| %>
 
     <div class="dashboard-list-item">
 
