@@ -1,4 +1,4 @@
-  <h2 style=" margin-left: 5vw; margin-bottom: 5vh !important;">Browse All Experiences</h2>
+  <h2>Browse All Experiences</h2>
 
   <div class="card-map-container">
 
@@ -7,7 +7,7 @@
             <div class="card-experience">
               <%= cl_image_tag experience.photos.first.key, crop: :fill %>
               <div class="card-info">
-                <h5><%= experience.title %></h5>
+                <h5 style="margin-bottom: 2vh !important;"><%= experience.title %></h5>
                 <h6> <%= experience.address %> </h6>
                 <p><small><%= experience.duration %> hours | <%= experience.category.titleize %></small></p>
                 <br>
