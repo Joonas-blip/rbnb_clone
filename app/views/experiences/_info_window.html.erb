@@ -1,0 +1,8 @@
+<div class="container_window">
+  <%= cl_image_tag experience.photos.first.key, crop: :fill, class: "image_window" %>
+  <h2><%= experience.title %></h2>
+  <p><%= experience.address %></p>
+      <div class="view-price_window">
+          <div class="button"><%= link_to "View", experience_path(experience) %></li>
+      </div>
+</div>
