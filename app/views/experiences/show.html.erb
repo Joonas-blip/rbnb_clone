@@ -1,4 +1,4 @@
-  <div class="experience-container">
+<div class="experience-container">
 
   <h3><%= @experience.title %></h3>
   <!-- <h5><%= @experience.location %></h5> -->
@@ -33,6 +33,7 @@
 
   <div class="description-form">
     <div class="guide-description">
+      <h5>Description</h5>
       <p><%= @experience.description %></p>
     </div>
 
@@ -52,5 +53,102 @@
         <%= f.submit "Book", class: "button" %>
       <% end %>
     </div>
+
   </div>
+
+  <div class="reviews-container">
+
+    <h5>Reviews</h5>
+    <p>4.85 (17 Reviews)</p>
+
+    <div class="all-reviews">
+    <div class="review-box">
+
+      <div class="avatar-name-date">
+
+        <div class="reviewer-avatar">
+          <img src="<%= @experience.user.avatar %>" placeholder="user avatar" class="avatar">
+        </div>
+
+        <div class="reviewer-details">
+          <p><strong>Jane Smith <%= @experience.user.first_name.capitalize! %></strong></p>
+          <p>November 2021</p>
+        </div>
+
+      </div>
+      <br>
+      <br>
+
+      <p>Our tour guide was just magical! She made our party of 9 feel like we were confident walkers and helped even our youngest have the loveliest of times. Who would have thought that walking could be so fun! You absolutely should pick this experience. I cannot imagine that you could have an equal experience to this one anyplace else. Top notch..</p>
+
+    </div>
+
+    <div class="review-box">
+
+      <div class="avatar-name-date">
+
+        <div class="reviewer-avatar">
+          <img src="<%= @experience.user.avatar %>" placeholder="user avatar" class="avatar">
+        </div>
+
+        <div class="reviewer-details">
+          <p><strong>Harry Johnson <%= @experience.user.first_name.capitalize! %></strong></p>
+          <p>November 2021</p>
+        </div>
+
+      </div>
+      <br>
+      <br>
+
+      <p>This walking tour was the first thing we did; it gave us a great frame of reference for the downtown area and gave us confidence to explore on our own later in the day (with some suggestions from Dave). We really enjoyed the historical photos and hearing about future city plans, as well as the funny stories and anecdotes. Dave was so friendly, inclusive and a wealth of information. We walked at an easy pace and the three hours flew by. Would recommend this experience to anyone!!</p>
+
+    </div>
+
+    <div class="review-box">
+
+      <div class="avatar-name-date">
+
+        <div class="reviewer-avatar">
+          <img src="<%= @experience.user.avatar %>" placeholder="user avatar" class="avatar">
+        </div>
+
+        <div class="reviewer-details">
+          <p><strong>Mary Potts <%= @experience.user.first_name.capitalize! %></strong></p>
+          <p>December 2021</p>
+        </div>
+
+      </div>
+      <br>
+      <br>
+
+      <p>Dave was an enthusiastic and knowledgeable host! The tour is limited to a comparatively small region of the city but he packs a lot in and you get to learn a ton about the history of the city through this tour!</p>
+
+    </div>
+
+    <div class="review-box">
+
+      <div class="avatar-name-date">
+
+        <div class="reviewer-avatar">
+          <img src="<%= @experience.user.avatar %>" placeholder="user avatar" class="avatar">
+        </div>
+
+        <div class="reviewer-details">
+          <p><strong>Daria Frolova <%= @experience.user.first_name.capitalize! %></strong></p>
+          <p>December 2021</p>
+        </div>
+
+      </div>
+      <br>
+      <br>
+
+      <p>Thank you for the Tour which was very interesting with a lot of details (even though I know Toronto a bit) I have learned quite a bit</p>
+
+    </div>
+
+  </div>
+
+  <p class="button">See All Reviews</p>
+  </div>
+
 </div>
