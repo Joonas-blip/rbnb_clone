@@ -16,7 +16,7 @@
 
       <div class="dashboard-details">
         <p><strong><%= booking.experience.title.titleize %></strong></p>
-        <p class="font-thin"><%= booking.start_time.strftime('%H:%M') %> | <%= booking.end_time.strftime('%H:%M') %> | <%= booking.start_time.strftime('%d/%m/%Y') %> | Booked by: <%= booking.user.first_name.capitalize %></p>
+        <p class="font-thin"><%= booking.start_time.strftime('%H:%M') %> | <%= booking.end_time.strftime('%H:%M') %> | <%= booking.start_time.strftime('%d/%m/%Y') %> | Booked by: <%= booking.user.first_name.capitalize %> <%= booking.user.last_name.capitalize %></p>
       </div>
 
       <div class="view-details">
