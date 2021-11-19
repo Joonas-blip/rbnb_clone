@@ -3,8 +3,9 @@ class ExperiencesController < ApplicationController
   before_action :set_experience, only: [:show]
 
   def index
+    sql_query = "title ILIKE :query OR address ILIKE :query"
     if params[:query].present?
-      @experiences = Experience.where("address ILIKE ?", "%#{params[:query]}%")
+      @experiences = Experience.where(sql_query, query: "%#{params[:query]}%")
     else
       @experiences = Experience.all
     end
