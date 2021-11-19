@@ -8,11 +8,11 @@ class BookingsController < ApplicationController
     @experience = booking.experience
     @booking = Booking.new
     if booking.save!
-      render "experiences/show"
       flash[:notice] = "Booked succesfully"
-    else
       render "experiences/show"
+    else
       flash[:alert] = "Something went wrong!"
+      render "experiences/show"
     end
   end
 
