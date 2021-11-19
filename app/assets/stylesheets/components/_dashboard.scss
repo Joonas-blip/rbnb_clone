@@ -5,8 +5,11 @@
 }
 
 .links-left h4 {
-  margin-top: 5vh;
-  margin-bottom: 10vh;
+  margin-bottom: 5vh !important;
+}
+
+.links-left h5 {
+  font-weight: 400;
 }
 
 .links-left a {
@@ -28,7 +31,7 @@
   background-color: white;
   box-shadow: 2.5px 2.5px 10px lightgrey;
   border-radius: 20px;
-  margin-bottom: 10vh;
+  margin-bottom: 10vh !important;
 }
 
 .dashboard-list-item {

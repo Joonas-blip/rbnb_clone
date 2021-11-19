@@ -1,8 +1,9 @@
   <div class="experience-container">
 
-  <h2><%= @experience.title %></h2>
+  <h3><%= @experience.title %></h3>
   <!-- <h5><%= @experience.location %></h5> -->
-  <h5><%= @experience.address %></h5>
+  <h5 style="font-style: italic !important; margin-bottom: 2vh !important;">
+  <%= @experience.address %></h5>
   <br>
   <br>
 
@@ -25,7 +26,6 @@
 
     <div class="guide-details">
       <p><strong>Hosted by <%= @experience.user.first_name.capitalize! %></strong></p>
-      <br>
       <p><%= @experience.duration %> hours | €<%= @experience.price %> / hour</p>
     </div>
 
