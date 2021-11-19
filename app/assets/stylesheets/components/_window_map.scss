@@ -9,7 +9,6 @@
   border-radius: 8px !important;
 }
 .container_window {
-  height: 350px;
   h2 {
     font-size: 25px;
     padding-top: 1vh;
@@ -22,6 +21,11 @@
     padding-top: 1vh;
    }
 }
+
+.container_window {
+    height: 320px;
+    padding-bottom: 4vh;
+}
 .mapboxgl-popup-close-button {
   background-color: white !important;
   border-radius: 50% !important;
@@ -32,4 +36,5 @@
 .view-price_window {
   margin-left: 50px;
   margin-top: 10px;
+  padding-bottom: 10px;
 }
