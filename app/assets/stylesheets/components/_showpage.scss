@@ -1,6 +1,8 @@
 .experience-container {
   width: 80vw;
   margin: 0 auto;
+    margin-bottom: 20vh !important;
+
 }
 
 .photo-container img {
@@ -12,14 +14,14 @@
 }
 
 
-.guide-details-container {
+.guide-details-container, .avatar-name-date {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   line-height: 5px;
 }
 
-.guide-details {
+.guide-details, .reviewer-details {
   margin-left: 25px;
   letter-spacing: 1px;
   display: block;
@@ -34,7 +36,15 @@
 }
 
 .guide-description {
+  padding-top: 3vh;
   width: 60%;
+  margin-bottom: 20vh !important;
+
+}
+
+.guide-description h5 {
+  font-weight: 500;
+  padding-bottom: 3vh;
 }
 
 .guide-form {
@@ -48,9 +58,44 @@
   border-radius: 20px;
   box-shadow: 2.5px 2.5px 10px lightgrey;
   margin-top: -10vh;
-  margin-bottom: 20vh !important;
 }
 
 .guide-form .button {
   border: none;
+}
+
+.reviews-container {
+  width: 100%;
+  border-top: 1px solid lightgray;
+}
+
+.reviews-container h5 {
+  font-weight: 500;
+  padding-top: 3vh;
+
+}
+
+
+.avatar-name-date {
+    margin-top: 5vh;
+
+}
+
+.review-box {
+  width: 40%;
+}
+
+.all-reviews {
+  margin-top: 5vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+
+.reviews-container .button {
+  width: 15vw;
+  margin: 10vh auto;
 }
