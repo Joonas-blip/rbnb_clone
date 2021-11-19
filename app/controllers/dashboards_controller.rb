@@ -2,11 +2,16 @@ class DashboardsController < ApplicationController
   before_action :authenticate_user!, :validate_user
 
   def profile
-      @dash_experiences = Experience.where(user:current_user)
+      @dash_experiences = Experience.where(user: current_user)
   end
 
   def bookings
-    @dash_bookings = Booking.where(user:current_user)
+    @bookings = Booking.all
+    @dash_bookings = @bookings.map  do |booking|
+      if booking.experience.user == current_user
+        booking
+      end
+    end
   end
 
   private
