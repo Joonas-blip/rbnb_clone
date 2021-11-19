@@ -9,7 +9,7 @@
   </div>
 
   <div class="dashboard-list">
-
+    <h5>Pending bookings (<%= @dash_bookings.where(status: 'pending').count %>)</h5>
     <% @dash_bookings.each do |booking| %>
 
     <div class="dashboard-list-item">
