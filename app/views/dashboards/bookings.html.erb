@@ -23,8 +23,24 @@
       <div class="booking-status">
         <%= "Status: #{booking.status.capitalize}" %>
         <div class="markers">
-          <div class="status-marker confirm"><%= link_to "✓", confirm_experience_booking_path(experience_id: booking.experience_id, id: booking.id) %></div>
-          <div class="status-marker reject"><%= link_to "X", reject_experience_booking_path(experience_id: booking.experience_id, id: booking.id) %></div>
+          <% if booking.status == 'confirmed' %>
+            <div class="status-marker confirm" style="background-color: lightgreen;">
+              <%= link_to "✓", confirm_experience_booking_path(experience_id: booking.experience_id, id: booking.id) %>
+            </div>
+          <% else %>
+            <div class="status-marker confirm">
+              <%= link_to "✓", confirm_experience_booking_path(experience_id: booking.experience_id, id: booking.id) %>
+            </div>
+          <% end %>
+          <% if booking.status == 'rejected' %>
+            <div class="status-marker confirm" style="background-color: salmon">
+              <div class="status-marker reject"><%= link_to "X", reject_experience_booking_path(experience_id: booking.experience_id, id: booking.id) %></div>
+            </div>
+          <% else %>
+            <div class="status-marker confirm">
+              <div class="status-marker reject"><%= link_to "X", reject_experience_booking_path(experience_id: booking.experience_id, id: booking.id) %></div>
+            </div>
+          <% end %>
         </div>
       </div>
 
