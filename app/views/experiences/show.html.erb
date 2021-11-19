@@ -8,10 +8,10 @@
   <br>
 
   <div class="photo-container">
-    <!-- <% @experience.photos.each do |photo| %>
-      <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
-    <% end %> -->
-    <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Tourists_with_guide_in_lower_canyon%2C_Petra.jpg">
+    <% @experience.photos.each do |photo| %>
+      <%= cl_image_tag photo.key, crop: :fill %>
+    <% end %>
+    <!--<img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Tourists_with_guide_in_lower_canyon%2C_Petra.jpg">-->
   </div>
 
   <br>
